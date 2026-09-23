@@ -3,7 +3,13 @@
 ## Funcionais
 
 1. Criar **Livros**
-1. Trazer informações de Nome, Autor e Editora nos livros
+1. Livros de **Estudos** devem ter o Nível de Graduação (brasileiro) neles
+1. Livros de **Filosofia** devem ter o Eixo Filosofico deles, sendo eles:
+    * Sofismo
+    * Estoisismo
+    * Nilismo
+1. Trazer informações de Nome, Generos (estudos, terror, romance, filosofia...), **Autor** e **Editora** nos livros
+1. Caso **Editora** seja o próprio **Autor**, ele não precisa ser relacionado com **Autor**, essa informação é irrelevante
 1. Criar **Estantes** para organizar os livros
 1. Poder organizar as estantes por:
     * Nome autor
@@ -51,7 +57,7 @@
 1. Responder a programas externos (API)
 1. Poder gerar os mapas em:
     * Planilha (xlsx)
-    * Texto tabulado (csv)
+    * Texto (txt)
 1. Permitir localizar itens especificos de:
     * Cidades
     * Bairros
@@ -66,11 +72,16 @@
 ## Não funcionais
 
 1. Salvar os dados localmente, em arquivo
+1. Após salvar primeira vez, as consecutivas usarão as mesmas opções de antes (a menos que solicitado contrario)
 1. Caso haja mais de um item correspondente em uma procura, listar opções
 1. Interface gráfica para produto final (para prévisualização dos mapas)
 1. JSON para comunicação API
-1. Exportar dados salvos em JSON também (aproveita p/ API e persistência)
+1. Persistência em:
+    * JSON (aproveita p/ API e persistência)
+    * Texto tabulado (csv)
+1. Para clarificar: **Editora** pode ser uma pessoa física não-editora (**EditoraPJ**), pessoa juridica com um local relevante no mapa do usuário (**EditoraPF**) ou só algo irrelevante para o contexto do usuário (**Editora** generica).
 
 ## Inversos
 
-(nenhum)
+1. Não será suportado **Livros** e **Estantes** duplicados. Motivos de simplificação
+1. Não será usada persistência online
